@@ -1,7 +1,7 @@
-package Repository;
+package com.example.carreservation.Repository;
 
-import Entity.Car;
-import Entity.Reservation;
+import com.example.carreservation.Entity.Car;
+import com.example.carreservation.Entity.Reservation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

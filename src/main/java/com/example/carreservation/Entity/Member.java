@@ -1,10 +1,12 @@
-package Entity;
+package com.example.carreservation.Entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import net.minidev.json.annotate.JsonIgnore;
 
 import java.util.Set;
 
@@ -42,6 +44,7 @@ public class Member {
     private double ranking;
 
     @OneToMany(mappedBy = "member_id")
+    @JsonBackReference
     private Set<Reservation> reservation;
 
     public Member(String firstName, String lastName, String street, String city, String zip, boolean licenseApproved, double ranking) {

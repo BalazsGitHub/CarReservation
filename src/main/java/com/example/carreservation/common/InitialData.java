@@ -1,10 +1,11 @@
-package common;
+package com.example.carreservation.common;
 
-import Entity.Car;
-import Entity.Member;
-import Repository.CarRepository;
-import Repository.MemberRepository;
-import Repository.ReservationRepository;
+import com.example.carreservation.Entity.Car;
+import com.example.carreservation.Entity.Member;
+import com.example.carreservation.Entity.Reservation;
+import com.example.carreservation.Repository.CarRepository;
+import com.example.carreservation.Repository.MemberRepository;
+import com.example.carreservation.Repository.ReservationRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -37,5 +38,10 @@ public class InitialData implements CommandLineRunner {
 
         memberRepository.save(member1);
         memberRepository.save(member2);
+
+        Reservation reservation1 = new Reservation("2022.12.31", "2023.01.01.", car1, member1);
+
+        reservationRepository.save(reservation1);
+
     }
 }

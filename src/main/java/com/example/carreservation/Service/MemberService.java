@@ -1,12 +1,9 @@
-package Service;
+package com.example.carreservation.Service;
 
-import Entity.Member;
-import Repository.MemberRepository;
+import com.example.carreservation.Entity.Member;
+import com.example.carreservation.Repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
 import java.util.List;
 
 @Service
@@ -16,7 +13,7 @@ public class MemberService {
 
     @Autowired
     public MemberService(MemberRepository memberRepository) {
-        this.memberRepository = MemberService.this.memberRepository;
+        this.memberRepository = memberRepository;
     }
 
     public List<Member> getAllMembers() {

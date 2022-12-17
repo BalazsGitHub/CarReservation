@@ -1,7 +1,7 @@
-package Service;
+package com.example.carreservation.Service;
 
-import Entity.Reservation;
-import Repository.ReservationRepository;
+import com.example.carreservation.Entity.Reservation;
+import com.example.carreservation.Repository.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

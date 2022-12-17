@@ -1,12 +1,9 @@
-package Service;
+package com.example.carreservation.Service;
 
-import Entity.Car;
-import Entity.Reservation;
-import Repository.CarRepository;
+import com.example.carreservation.Entity.Car;
+import com.example.carreservation.Repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -16,7 +13,9 @@ public class CarService {
     private final CarRepository carRepository;
 
     @Autowired
-    public CarService(CarRepository carRepository){ this.carRepository = carRepository;}
+    public CarService(CarRepository carRepository)
+    { this.carRepository = carRepository;}
+
     public List<Car> getAllCars() {
         return carRepository.findAll();
     }

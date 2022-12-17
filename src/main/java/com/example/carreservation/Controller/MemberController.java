@@ -1,7 +1,7 @@
-package Controller;
+package com.example.carreservation.Controller;
 
-import Entity.Member;
-import Service.MemberService;
+import com.example.carreservation.Entity.Member;
+import com.example.carreservation.Service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
